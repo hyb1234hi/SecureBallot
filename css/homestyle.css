@@ -1,0 +1,181 @@
+@import "compass/css3";
+
+@mixin bp($point) {
+@if $point == l {
+@media (min-width: 65rem) { @content; }
+}
+@else if $point == m {
+@media (min-width: 45rem) { @content; }
+}
+@else if $point == s {
+@media (min-width: 35rem) { @content; }
+}
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+$blue: #3C55FC;
+$blue-light: lighten($blue, 35);
+$orange: #FF9900;
+$sans: 'Open Sans', helvetica;
+$padding: 3rem 8%;
+* {
+  @include box-sizing(border-box);
+}
+section {  
+  padding: $padding;
+  h1 {
+    font-family: $sans;
+    color: $blue;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+  }
+  
+label {
+      color: #286090;
+      display: inline-block;
+      margin-left: 18px;
+      padding-top: 10px;
+      font-size: 16px;
+  }
+ 
+  p{
+    font-family: georgia;
+    line-height: 1.5em;
+    font-size: 1.2rem;
+    @include bp(m){
+    font-size: 2rem;
+    width: 80%;
+    }
+  }
+  
+  a {
+    color: $blue;
+  }
+}
+
+em {
+  font-style: italic;
+}
+  
+  .tagline {
+     font-size: 3.5rem;
+    @include bp(m){font-size: 2rem}
+    line-height: 1.4em;
+    color: #286090;
+    margin-left: 80px;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 2rem
+  }
+
+  border-bottom: 1px solid $blue;
+
+.languages {
+  left-padding: 5rem;
+  position: absolute;
+  align-content: right;
+  top: 1rem;
+  right: 6rem;
+}
+
+.btn-primary {
+  background: $orange;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  font-family: $sans;
+  @include transition(.5s);
+  &:hover, &:focus {
+    background: lighten($orange, 5);
+    box-shadow: 0 0 0 5px darken($blue, 5);
+  }
+}
+
+.btn-secondary {
+  padding: .5rem;
+  display: inline-block;
+  background: $blue;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+        input[type=submit] {
+            float: right;
+            margin-right: 20px;
+            margin-top: 20px;
+            width: 80px;
+            height: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #286090;
+            background-color: #acd6ef; /*IE fallback*/
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+            background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+            background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+            border-radius: 30px;
+            border: 1px solid #66add6;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+            cursor: pointer;
+        }
+
+footer {
+  border-top: 1px solid lightgray;
+  padding: $padding;
+  background: lighten($blue, 36);
+  .search {
+    width: -moz-calc(100% - 4rem);
+    width: -webkit-calc(100% - 4rem);
+    padding: 1rem;
+    border-radius: 0;
+    border: 1px solid lightgray;
+    margin-bottom: 2rem;
+    
+    &:focus {
+      border-color: $blue;
+    }
+  }
+  
+  li {
+    font-family: $sans;
+    color: $blue;
+    cursor: pointer;
+    &:hover, &:focus {
+      color: lighten($blue, 5);
+    }
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+   width: 48%;
+    @include bp(m){
+      width: 24%;
+    }
+    line-height: 1.5em;
+    margin-bottom: 2rem;
+    
+    li {
+      color: gray;
+      float: none;
+      font-weight: normal;
+      margin-bottom: 0;
+      width: 100%;
+     }
+  }
+}
+
+.btn-secondary {
+  padding: 1rem;
+  display: inline-block;
+  background: $blue;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  border: 1px solid #233ffc;
+  font-weight: bold;
+  &:hover, &:focus {
+  background: lighten($blue, 4);
+}
+}
