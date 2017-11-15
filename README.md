@@ -15,3 +15,7 @@ Ethereum is a platform for Smart Contracts. It provides channel decentralised co
 - Each user will have sufficient ETH (Ethereum currency) to vote exactly once but not more. So duplicate votes will be prevented.
 - The votes cannot be altered because there is no cetralised server. Rather for each vote one transaction gets recorded in the blockchain which is immutable.
 - Any hacking attempt on the blockchain will be detected since it changes the hashes for the individual transactions. So there will be complete transparency. 
+
+### Alternative to EVMs
+
+It is proposed that this blockchain based systems can be used to replace conventional EVMs(Electronic Voting Machines). Now In every polling booth there can be systems with this dApp (distributed app). In that case it will not be ncessary for the voters to have ethers (crypto curency) individually in order to be able to cast their votes. So the problem of distributing ethers is eliminated. Now there will be only immutable transactions in the blockchain for each vote cast.
