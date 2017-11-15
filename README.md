@@ -19,3 +19,7 @@ Ethereum is a platform for Smart Contracts. It provides channel decentralised co
 ### Alternative to EVMs
 
 It is proposed that this blockchain based systems can be used to replace conventional EVMs(Electronic Voting Machines). Now In every polling booth there can be systems with this dApp (distributed app). In that case it will not be ncessary for the voters to have ethers (crypto curency) individually in order to be able to cast their votes. So the problem of distributing ethers is eliminated. Now there will be only immutable transactions in the blockchain for each vote cast.
+
+### A simplified Block Diagram
+
+<img src="secureBallotBlock.svg">
